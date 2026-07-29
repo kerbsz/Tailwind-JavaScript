@@ -26,8 +26,6 @@ yarn-error.log*
 # Lock files (optionally ignore if you want reproducible installs tracked)
 # package-lock.json
 
-# Tailwind/PostCSS cache or generated CSS
-/src/output.css
 
 # Misc
 coverage/
