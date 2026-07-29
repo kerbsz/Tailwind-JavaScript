@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>Project 2</title>
+</head>
+    <body class=" bg-black">
+        <h1 class="text-white text-center text-6xl font-mono">Simple Weight Converter</h1>
+
+        <div class="bg-white p-2 top-2 w-3/6 mx-auto rounded-2xl hover:bg-amber-50">
+            <div class="p-5 bg-black flex flex-col gap-2 items-center justify-center rounded-2xl">
+                <h1 class="text-white text-2xl inline-block">COMPUTE WEIGHT:</h1>
+                <input type="text" name="inputW" id="inputWeight" class="text-center text-2xl text-white rounded-2xl border-2 border-white p-3">
+                
+                <div class="flex flex-col gap-4 mt-4 w-fit mx-auto text-left">
+                    <!-- Option 1 -->
+                    <div class="flex items-center gap-3">
+                        <input type="radio" name="conversion" id="KgtoGrams">
+                        <label class="text-2xl text-white font-mono" for="KgtoGrams">KILOGRAMS TO GRAMS</label>
+                    </div>
+                    <!-- Option 2 -->
+                    <div class="flex items-center gap-3">
+                        <input type="radio" name="conversion" id="GramstoKilos">
+                        <label class="text-2xl text-white font-mono" for="GramstoKilos">GRAMS TO KILOGRAMS</label>
+                    </div>
+                    <!-- Option 3 -->
+                    <div class="flex items-center gap-3">
+                        <input type="radio" name="conversion" id="KgtoTons">
+                        <label class="text-2xl text-white font-mono" for="KgtoTons">KILOGRAMS TO TONS</label>
+                    </div>
+                    <!-- Option 4 -->
+                    <div class="flex items-center gap-3">
+                        <input type="radio" name="conversion" id="tonsToKilos">
+                        <label class="text-2xl text-white font-mono" for="tonsToKilos">TONS TO KILOGRAMS</label>
+                    </div>
+                    <button onclick="convertTheWeight()" class="text-white text-2xl border-2 border-white rounded-2xl hover:bg-white hover:text-black hover:border-2 cursor-pointer hover:border-red-600 text-center">SUBMIT</button>
+
+                    <p id="lblconvert" class="text-2xl text-white text-center">(CONVERTED TO)</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nesciunt minima deserunt, sed at maiores nihil quo inventore debitis aliquam non vero? Corporis ex tempore atque dolorum distinctio corrupti facere?</p>
+        <br>
+    </body>
+    <script src="script.js"></script>
+</html>
