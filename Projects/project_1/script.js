@@ -37,4 +37,3 @@ function sumbit(){
 
 let age =18;
 let message = age >= 18 ? "YOU ARE A ADULT" : "YOU ARE A MINOR";
-alert(message)

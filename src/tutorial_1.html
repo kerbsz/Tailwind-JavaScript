@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./output.css">
+        <title>Tutorial_1</title>
+    </head>
+    <body class="">
+
+        <div class="bg-violet-200 h-10 w-full border-2 border-violet-600 rounded-md mt-2 p-2">
+            <h1 class="text-center font-mono font-extrabold"> KERBY SEXON</h1>
+        </div>
+        <h1 class="text-center text-red-600 text-6xl">Flex Box</h1>
+        <div class="flex justify-around  items-center not-last-of-type:space-x-5 mt-2">
+            <div class="bg-blue-300  hover:bg-blue-700  rounded-full h-15 w-15">Blue</div>
+            <div class="bg-orange-300  hover:bg-orange-700 rounded-full h-15 w-15">Orange</div>
+            <div class="bg-green-300 hover:bg-green-700 rounded-full h-15 w-15">Green</div>
+        </div>
+        <br><hr><br>
+        <h1 class="text-center text-red-600 text-6xl">GRID LAYOUT</h1>
+        <div class="grid grid-rows-1 grid-cols-2 gap-2 mt-2 mx-2 text-center ">
+            <div class="bg-blue-300  hover:bg-blue-700  rounded-2xl h-30 flex items-center justify-center ">
+                <h3 class="relative top-5 right-50">BLUE</h3>
+                <h3 class="">BLUE</h3>
+                <h3 class="">BLUE</h3>
+            </div>
+            <div class="bg-orange-300  hover:bg-orange-700 rounded-2xl h-15 ">Orange</div>
+            <div class="bg-green-300 hover:bg-green-700 rounded-2xl h-15 ">Green</div>
+        </div>
+
+        <!--MEDIA QUERY-->
+        <div class="sm:bg-amber-500 max-md:bg-amber-800">
+            <p class="text-red-600 text-4xl">I appear on screen with 768px of dimension</p>
+        </div>
+        <br>
+        <div class="min-[600px]:bg-sky-300 min-[320px]:text-center">
+            <p class="text-orange-600 text-4xl">I appear on screen with 768px of dimension</p>
+        </div>
+        <br>
+
+        <div class="bg-white text-chestnut dark:bg-black  dark:text-white">
+            Dark Mode enbled!
+        </div>
+
+        <!--COMPONENTS-->
+        <div class="card">
+            <h2 class="text-base font-medium tracking-tight text-slate-900 dark:text-white"> Writes Upside Down</h2>
+            <p class="text-white selection:bg-green-500 selection:text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore omnis molestias aperiam magnam. Temporibus,
+            </p>
+            <br>
+            <button class="p-2 bg-white opacity-50 rounded-2xl cursor-pointer hover:opacity-100">
+                CLICK ME
+            </button>
+            <a href="" class="text-white underline font-mono"><h3>JOIN NOW on DISCORD</h3></a>
+        </div>
+
+        <label for="check" class="text-center"><input type="checkbox" id="check" class="accent-emerald-600 text-center">CHECK ME</label>
+
+        <p class="text-amber-300 selection:bg-green-500 selection:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempore quisquam laborum natus, odit delectus incidunt saepe minus, ea iste nostrum fuga molestias perferendis magni architecto sapiente. Nisi, dolores fugit?</p>
+        
+    </body>
+</html>
