@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutorial 5</title>
+    </head>
+    <body>
+        <pre>
+            //----------------ARROW FUNCTION---------------//
+let hello = () => {alert("HELLO")}
+//hello();
+
+nums = [1,2,3,4,5];
+
+let square = nums.map((element) => Math.pow(element,2))
+let evenmun = nums.filter((element) => element % 2 ===0);
+//console.log(evenmun)
+//console.log(square)
+//------------------------------------
+
+//-----------OBJECTS with function values-----------//
+let person = {
+    fname: "kerby",
+    lname: "sexon",
+    age: 18,
+    hobbies: ["playing", "adv studying", "watching"],
+    greet : () => {console.log("HELLO")}
+
+}
+
+//console.log(person.greet())
+//-------------------------------------------------//
+
+//----------OBJECTS with this. REFERENCES--------//
+let person2 = {
+    fname: "Kent",
+    lname: "Javier",
+    favGames: "valorant",
+    age: 18,
+    sayhello: function(){console.log(`Hello i'm ${this.fname}`)},
+    playing: function(){console.log(`I'm playing my favorite games: ${this.favGames.toUpperCase().charAt(0) + this.favGames.toLowerCase().slice(1)}`)}
+}
+
+//console.log(person2.fname);
+
+//-----------------------------------//
+
+//----------CONSTRUCTORS---------------------// 
+
+function agents(name,origin,roles){
+    this.name = name;
+    this.origin = origin;
+    this.roles = roles;
+    this.pick = function(){console.log(`I pick ${this.name}`)}
+}
+
+const jett = new agents("Jett", "Korea", "Duelist");
+const brim = new agents("Brimstone", "America", "Controller");
+
+//console.log(jett.roles);
+//console.log(brim.pick());
+//brim.pick();
+
+//----------CLASS of Constructors----------//
+
+class PcItems{
+        constructor(name,brand,price,discount){
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+            this.discount = discount;
+        }
+
+        displayProduct(){
+            console.log(`Product name: ${this.name}`);
+            console.log(`Product brand: ${this.brand}`);
+            console.log(`Product price: ${this.price}`);
+            console.log(`Product discount: ${this.discount * 100}%`);
+            console.log(`Total Price: ${this.calculateDiscount()}`);
+        }
+
+        calculateDiscount(discount){
+            return this.price - (this.price * this.discount);
+        }
+}
+
+let pcitem1 = new PcItems("Intel i5", "Intel",5000, 0.10);
+let pcitem2 = new PcItems("Ryzen 9", "AMD",12000, 0.20);
+
+//pcitem1.displayProduct();
+//console.log("")
+//pcitem2.displayProduct();
+//----------------------------------------------------//
+
+//---------------------Static-------------------//
+class Mathutil{
+    static pi = 3.14;
+
+    static getDiameter(radius){ 
+        return radius * 2;
+    }
+    
+    static getCircumference(radius){
+        return 2 * this.pi * radius;
+    }
+    
+    static getArea(radius){
+        return this.pi * radius * radius;
+    }
+}
+
+//console.log(Mathutil.pi);
+//console.log(Mathutil.getDiameter(10));
+//console.log(Mathutil.getCircumference(10));
+//console.log(Mathutil.getArea(10));
+
+
+class students {
+    static Stcount = 0;
+
+    constructor(name,section,grade){
+        this.name = name;
+        this.section = section;
+        this.grade = grade;
+        students.Stcount++;
+    }
+    static getSTcount(){
+        console.log(this.Stcount)
+    }
+    sayhello(){
+        console.log(`Hello I'm ${this.name}`);
+    }
+
+
+}
+
+let st1 = new students("kerby","Java",12);
+let st2 = new students("Kent","Android",11);
+let st3 = new students("James","Java",12);
+let st4 = new students("Echo","Android",11);
+let st5 = new students("Bolima","Java",12);
+
+//console.log(st1.sayhello())
+//console.log(st2)
+//console.log(st3)
+//console.log(st4)
+//console.log(st5)
+
+//students.getSTcount()
+//-----------------------------------------------//
+
+//-----------------Inheritance------------------//
+class Animal{
+    alive = true;
+
+    eat() {console.log(`This ${this.name} is eating!`);}
+    sleeping() {console.log(`This ${this.name} is sleeping!`);}
+}
+class Dog extends Animal{
+    name = "milky";
+
+    canWalktoLand() {console.log(`I can walk to land`)}
+}
+
+class bird extends Animal{
+    name = "thirdy";
+
+    canWalktoLand() {console.log(`I can walk to land`);}
+    canFly() {console.log(`I can fly`);}
+}
+const dog = new Dog();
+const parrot = new bird();
+
+dog.eat();
+dog.sleeping();
+dog.canWalktoLand();
+
+parrot.canFly();
+
+
+
+
+
+
+
+
+        </pre>
+    </body>
+    <script src="script.js"></script>
+</html>
