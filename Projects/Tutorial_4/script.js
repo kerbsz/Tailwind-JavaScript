@@ -24,4 +24,10 @@ console.log(squares)
 function square(element){
     return Math.pow(element,2)
 }
+//Function Expression
 
+const hello = function(){
+    console.log("HELLO");
+}
+
+hello();

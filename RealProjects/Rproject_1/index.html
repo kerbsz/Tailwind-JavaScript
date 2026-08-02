@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/output.css">
+        <title>CALCULATOR</title>
+    </head>
+    <body>
+        <h1 class="text-center font-mono text-3xl">WEB SIMPLE CALCULATOR</h1>
+        <div class=" bg-gray-400 flex justify-center items-center flex-col p-3 ">
+            <div class="bg-gray-950 w-fit p-5 rounded-2xl flex justify-center items-center flex-col ">
+                <input class="accent-amber-400 border-2 border-white text-white text-xl font-mono text-center p-5 mt-3 rounded-3xl" type="text" name="" id="inputBox">
+                
+                <div class="grid grid-rows-4 grid-cols-4 gap-1  mt-3 ">
+                    <button onclick="AC()" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">AC</button>
+                    <button onclick="appendToDisplay('%')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">%</button>
+                    <button onclick="del()"  class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black" id="del">Del</button>
+                    <button onclick="appendToDisplay('/')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">/</button>
+
+                    <button onclick="appendToDisplay('7')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">7</button>
+                    <button onclick="appendToDisplay('8')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">8</button>
+                    <button onclick="appendToDisplay('9')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">9</button>
+                    <button onclick="appendToDisplay('*')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">x</button>
+                    
+                    <button onclick="appendToDisplay('4')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">4</button>
+                    <button onclick="appendToDisplay('5')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">5</button>
+                    <button onclick="appendToDisplay('6')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">6</button>
+                    <button onclick="appendToDisplay('-')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">-</button>  
+
+                    <button onclick="appendToDisplay('1')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">1</button>
+                    <button onclick="appendToDisplay('2')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">2</button>
+                    <button onclick="appendToDisplay('3')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">3</button>
+                    <button onclick="appendToDisplay('+')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">+</button>
+
+                    <button onclick="appendToDisplay('()')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">()</button>
+                    <button onclick="appendToDisplay('0')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">0</button>
+                    <button onclick="appendToDisplay('.')" class="cursor-pointer border p-2.5 rounded-xl text-white font-mono hover:bg-white hover:text-black hover:border-black">.</button>
+                    <button onclick="Compute()" class="cursor-pointer border p-2.5 rounded-xl text-black font-mono bg-amber-600  hover:border-red-600">=</button>
+                </div>
+            </div> 
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, reiciendis nobis? Unde, cupiditate. Porro corporis quasi pariatur,
+                tempora quam blanditiis consequuntur sequi expedita cumque, iste earum cupiditate deserunt tempore necessitatibus.</p>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html> 
