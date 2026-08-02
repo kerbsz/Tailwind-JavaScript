@@ -1,0 +1,138 @@
+//---------------SUPER key word for the parent class---------/
+class Animal{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    likestoEat(faveFood){
+        console.log(`${this.name.charAt(0).toUpperCase() + this.name.slice(1)} likes to eat ${faveFood}`)
+    }
+}
+
+class Dog extends Animal{
+    constructor(name,age,runspeed,faveFood){
+        super(name,age);
+        this.runspeed = runspeed;
+        this.faveFood = faveFood;
+    }
+
+    introduce(){
+        console.log(`
+                    I'm a Dog named ${this.name}
+                    I'm ${this.age} years old and
+                    I can run at ${this.runspeed} mph`);
+    }
+    favFood(){
+        super.likestoEat(this.faveFood)
+    }
+
+}
+class Fish extends Animal{
+    constructor(name,age,swimspeed,faveFood){
+        super(name,age);
+        this.swimspeed = swimspeed;
+        this.faveFood = faveFood;
+    }
+    introduce(){
+        console.log(`
+                    I'm a Dog named ${this.name}
+                    I'm ${this.age} years old and
+                    I can swim at ${this.swimspeed} mph`)
+    }
+    favFood(){
+        super.likestoEat(this.faveFood)
+    }
+}
+class Bird extends Animal{
+    constructor(name,age,flyspeed,faveFood){
+        super(name,age);
+        this.flyspeed = flyspeed;
+        this.faveFood = faveFood;
+    }
+    introduce(){
+        console.log(`
+                    I'm a Dog named ${this.name}
+                    I'm ${this.age} years old and
+                    I can fly at ${this.flyspeed} mph`)
+    }
+    favFood(){
+        super.likestoEat(this.faveFood)
+    }
+}
+
+const dog = new Dog("milky",3, 25 ,"Raw Meat");
+const nemo = new Fish("nemo",2, 15,"Fish");
+const parrot = new Bird("guah",5, 30,"Vegetables");
+/*
+dog.introduce();
+dog.favFood();
+
+nemo.introduce();
+nemo.favFood();
+
+parrot.introduce();
+parrot.favFood();
+*/
+////////////////////////////////////////////////////////////////////////
+
+//-----------------------GETTERS AND SETTERS-------------------------//
+class BankAccount {
+  #balance = 0; // True private property
+
+    constructor(initialDeposit) {
+        this.balance = initialDeposit; // Triggers the setter
+    }
+
+    // Getter
+    get balance() {
+        return `$${this.#balance.toFixed(2)}`;
+    }
+
+    // Setter with data validation
+    set balance(amount) {
+        if (amount >= 0) {
+        this.#balance = amount;
+        } else {
+        console.error("Negative balances are not allowed!");
+        }
+    }
+}
+
+// Usage
+const myAccount = new BankAccount(100);
+//console.log(myAccount.balance); // $100.00
+myAccount.balance = 250;        // Updates private state via setter
+//console.log(myAccount.balance); // $250.00
+
+//------------------------------------------------//
+
+//-----------------------DESTRUCTURING-------------------------//
+let a = 1; b = 2;
+
+[a,b] = [b,a]
+//console.log(a + " " + b);
+
+let colors = ["red" ,"green","blue", "black", "white"];
+
+[colors[0], colors[4]] = [colors[4],colors[0]];
+
+console.log(colors);
+
+const person1 = {
+    fname: "gon",
+    lname: "freecss ",
+    age: 18,
+    job: "software developer"
+}
+const person2 = {
+    fname: "killua",
+    lname: "zoldyck",
+    age: 19,
+}
+const {fname,lname,age, job = "Unemployed"} = person2;
+
+console.log(fname);
+console.log(lname);
+console.log(age);
+console.log(job);
