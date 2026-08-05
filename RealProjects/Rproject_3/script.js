@@ -72,3 +72,17 @@ function restart(){
     tiescore = 0;
         tiescoreDisplay.textContent = `Tie/s: ${tiescore}`;
 }
+function quit(){
+    try{
+        if(pscore > cscore || pscore > tiescore){
+            alert("YOU WON THE GAME!!🙌");
+        }else if(tiescore > pscore || tiescore > cscore){
+            alert("You and Computer scores are Tied👏!");
+        }else if(cscore > pscore){
+            alert("YOU LOSE!");
+        } 
+    }catch(error){
+        console.log("ERROR")
+    }
+    
+}
