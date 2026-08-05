@@ -15,33 +15,39 @@
             <a href="quit.html"><button id="quit" class="transition-transform hover:scale-150 ease-in delay-100 hover:text-red-600">Quit</button></a>
         </nav>
         <div>
-            <div class="grid grid-cols-3 place-items-center mt-3 py-8">
+            <h1 class="text-center text-4xl mt-2.5 text-green-800">Player Pick:</h1>
+            <div class="grid grid-cols-3 place-items-center py-3">
                 <!-- Buttons with uniform styling and enlarged icons -->
-                <button onclick="playGame('rock')" class="hover:scale-110 transition-transform">
-                    <img src="img/stone.png" alt="stone" class=" border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                <button onclick="playGame('rock')" class="cursor-pointer hover:scale-110 transition-transform">
+                    <img src="img/stone.png" alt="stone" class=" border-2 border-white hover:border-green-700 rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                    <p>Rock</p>
                 </button>
-                <button onclick="playGame('paper')" class="hover:scale-110 transition-transform">
-                    <img src="img/paper.png" alt="paper" class="border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                <button onclick="playGame('paper')" class="cursor-pointer hover:scale-110 transition-transform">
+                    <img src="img/paper.png" alt="paper" class="border-2 border-white hover:border-green-700 rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                    <p>Paper</p>
                 </button>
-                <button onclick="playGame('scissors')" class="hover:scale-110 transition-transform">
-                    <img src="img/scissor.png" alt="scissors" class="border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
-                </button>
-            </div>
-
-            <div class="grid grid-cols-1 place-items-center mt-3 py-8">
-                <!-- Buttons with uniform styling and enlarged icons -->
-                <button class="hover:scale-110 transition-transform">
-                    <img src="img/paper.png" alt="paper" class="border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                <button onclick="playGame('scissors')" class="cursor-pointer hover:scale-110 transition-transform">
+                    <img src="img/scissor.png" alt="scissors" class="border-2 border-white hover:border-green-700 rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                    <p>Scissors</p>
                 </button>
             </div>
 
-            <div class="grid grid-cols-2 place-items-center mt-3 bg-white/50 backdrop-blur-2xl rounded-3xl w-full p-5 text-xl text-center">
-                <h1 id="playerDisplay" class="text-green-600">Player Win/s: </h1>
-                <h1 id="computerDisplay"  class="text-red-600">Computer Win/s: </h1>
+            <div class="grid grid-cols-1 place-items-center py-4">
+                    <h1 class="text-center text-xl text-red-600 my-1.5">Computer Pick:</h1>
+                    <img id="computerpick" src="img/paper.png" alt="paper" class="border-2 hover:border-red-700 hover:scale-110 transition-transform rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                    <p id="compickname" class="mt-0.5">Rock</p>
             </div>
-
+            
         </div>
-        
+        <div class="grid grid-rows-2 place-items-center mt-3 bg-white/50 backdrop-blur-[2px] rounded-3xl w-full p-3 absolute bottom-4 text-xl text-center">
+                <div class="p-2 bg-black/20 hover:bg-black/80 hover:text-white rounded-2xl"><button onclick="restart()" class="cursor-pointer transition-transform">RESTART</button></div>
+                <div class="grid grid-cols-3">
+                    <h1 id="PscoreDisplay" class="text-green-900">Player Win/s: </h1>
+                    <h1 id="tie"  class="text-blue-800">Tie/s: </h1>
+                    <h1 id="CscoreDisplay"  class="text-red-800">Comp Win/s: </h1>
+                </div>
+                
+        </div>
     </body>
     <script src="script.js"></script>
 </html>
