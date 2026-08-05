@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body{
+    margin: 0;
+    background-image: url(img/end.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#EndHeading{
+    font-family: "Pixelify Sans", sans-serif;
+}
+#restart{
+    font-family: "Pixelify Sans", sans-serif;
+}

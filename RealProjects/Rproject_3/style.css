@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body{
+    background-image: url(img/start.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body button{
+    font-family: "Pixelify Sans", sans-serif;
+}
+#gameHeading{
+    font-family: "Pixelify Sans", sans-serif;
+}

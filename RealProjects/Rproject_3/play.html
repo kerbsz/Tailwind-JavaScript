@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/output.css">
+        <link rel="stylesheet" href="play.css">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <title>ROCK PAPER SCISSOR GAME</title>
+        
+    </head>
+    <body>
+        <nav class="bg-white/50 p-3.5 text-3xl text-center grid grid-cols-2">
+            <a href="index.html"><button id="home" class="transition-transform hover:scale-150 ease-in delay-100 hover:text-red-600">Home</button></a>
+            <a href="quit.html"><button id="quit" class="transition-transform hover:scale-150 ease-in delay-100 hover:text-red-600">Quit</button></a>
+        </nav>
+        <div>
+            <div class="grid grid-cols-3 place-items-center mt-3 py-8">
+                <!-- Buttons with uniform styling and enlarged icons -->
+                <button onclick="playGame('rock')" class="hover:scale-110 transition-transform">
+                    <img src="img/stone.png" alt="stone" class=" border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                </button>
+                <button onclick="playGame('paper')" class="hover:scale-110 transition-transform">
+                    <img src="img/paper.png" alt="paper" class="border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                </button>
+                <button onclick="playGame('scissors')" class="hover:scale-110 transition-transform">
+                    <img src="img/scissor.png" alt="scissors" class="border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 place-items-center mt-3 py-8">
+                <!-- Buttons with uniform styling and enlarged icons -->
+                <button class="hover:scale-110 transition-transform">
+                    <img src="img/paper.png" alt="paper" class="border rounded-xl w-35 h-35 object-contain hover:backdrop-blur-2xl ease-in">
+                </button>
+            </div>
+
+            <div class="grid grid-cols-2 place-items-center mt-3 bg-white/50 backdrop-blur-2xl rounded-3xl w-full p-5 text-xl text-center">
+                <h1 id="playerDisplay" class="text-green-600">Player Win/s: </h1>
+                <h1 id="computerDisplay"  class="text-red-600">Computer Win/s: </h1>
+            </div>
+
+        </div>
+        
+    </body>
+    <script src="script.js"></script>
+</html>
