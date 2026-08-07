@@ -49,10 +49,10 @@ function displayInfo(data){
         base_experience: experience} = data;
         
         if(data != undefined){
-            pokemonName.textContent =`Name: ${name.toUpperCase()}`;
-            pokemonId.textContent =`Id: ${id}`;
-            pokemonWeight.textContent =`Weight: ${weight}`;
-            pokemonExperience.textContent =`Battle Experience: ${experience}`;
+            pokemonName.textContent =`Name:${name.toUpperCase()}`;
+            pokemonId.textContent =`Id:${id}`;
+            pokemonWeight.textContent =`Weight:${weight}`;
+            pokemonExperience.textContent =`Battle Experience:${experience}`;
         }
         
 

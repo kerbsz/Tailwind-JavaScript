@@ -106,15 +106,21 @@ function feedtheChicken(){
 function washthedishes(){
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve("I ALREADY WASH THE DISHES")
+            resolve("I ALREADY WASH THE DISHES");
         }, 2000);
     })
 }
-
 function throwthetrash(){
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve("I ALREADY THROW THE TRASH")
+            resolve("I ALREADY THROW THE TRASH");
+        }, 2000);
+    })
+}
+function broomthefloor(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("I ALREADY BROOM THE ROOM")
         }, 2000);
     })
 }
@@ -128,6 +134,9 @@ async function chores(){
 
     const throwtrash = await throwthetrash();
     console.log(throwtrash);
+
+    const broomtheroom = await broomthefloor();
+    console.log(broomtheroom);
 
 
 }
