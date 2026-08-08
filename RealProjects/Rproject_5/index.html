@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/src/output.css">
+        <link rel="shortcut icon" href="img/weatherICon.png" type="image/x-icon">
+        <title>WEATHER APP</title>
+    </head>
+    <body>
+        <div class="h-screen w-full flex items-center justify-center">
+            <div id="container" class="w-[80%] bg-white/20 text-white p-3 rounded-2xl shadow-2xl shadow-black backdrop-blur-[3px] md:w-[40%]">
+                <div>
+                    <h1 class="text-center text-6xl text-transparent bg-clip-text bg-linear-to-r from-pink-500 via-red-500 to-violet-500">NEWS</h1>
+                    <form action="" id="weatherForm" class="grid grid-cols-2 gap-7 mb-2">
+                        <input id="cityInput" type="text" placeholder="Enter City" class="border focus:text-black border-white rounded-2xl p-2 text-center focus:outline-white">
+                        <button  class="border border-white rounded-2xl cursor-pointer hover:bg-white/50 hover:text-black">Check Weather</button>
+                    </form>
+                </div> 
+                <div id="weatherCard" class="bg-white/10 rounded-2xl p-1.5 grid grid-cols-2 gap-3 shadow-2xl ">
+                    <div class="text-2xl font-sans grid">
+                        <p id="cityDisplay" class="text-3xl mt-3">📍CITY</p>
+                        <p id="dateDisplay" class="text-4xl">Date</p>
+                        <h1 id="errorDisplay" style="display: none;" class="text-3xl text-center text-red-600 items-center my-auto">error</h1>
+                        <p id="temperatureDisplay" class="text-5xl">Temp</p>
+                        <p id="humidityDisplay" class="text-2xl">HUMIDITY</p>
+                    </div>
+                    <div>
+                        <img id="imgDisplay" src="img/weatherICon.png" alt="img" class="rounded-2xl bg-white/20 backdrop-blur-2xl">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,13 @@
+body{
+    font-family:monospace;
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.errorDisplay{
+    font: 400;
+    color:white;
+    text-align: center;
+}
