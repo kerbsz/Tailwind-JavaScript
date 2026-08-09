@@ -52,7 +52,7 @@ function displayWeatherInfo(data){
     let errorDisplay = document.querySelector("#errorDisplay");
     errorDisplay.style.display = "none";
 
-    cityDisplay.textContent = `${city},${country}${getWeatherEmoji(id)}`;
+    cityDisplay.textContent = `${city},${country}`;
     dateDisplay.textContent = new Date().toLocaleDateString();
     temperatureDisplay.textContent = `${(temp - 273.15).toFixed(1)} °C`;
     humidityDisplay.textContent = `Humidity ${humidity}%`;
